@@ -1,0 +1,60 @@
+server:
+  port: ${SERVER_PORT:8080}
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        secure: ${SESSION_COOKIE_SECURE:false}
+        same-site: lax
+
+spring:
+  application:
+    name: alumni-management-api
+  datasource:
+    url: ${DB_URL:jdbc:mysql://127.0.0.1:3306/alumni_management_dev?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Bangkok}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    hikari:
+      maximum-pool-size: ${DB_POOL_MAX_SIZE:10}
+      minimum-idle: ${DB_POOL_MIN_IDLE:1}
+  flyway:
+    enabled: ${DB_MIGRATE_ENABLED:false}
+  mail:
+    host: ${MAIL_HOST:}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail.smtp.auth: ${MAIL_SMTP_AUTH:true}
+      mail.smtp.starttls.enable: ${MAIL_SMTP_STARTTLS:true}
+      mail.smtp.starttls.required: ${MAIL_SMTP_STARTTLS_REQUIRED:false}
+      mail.smtp.ssl.enable: ${MAIL_SMTP_SSL:false}
+      mail.smtp.connectiontimeout: 5000
+      mail.smtp.timeout: 5000
+      mail.smtp.writetimeout: 5000
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 12MB
+
+app:
+  reports:
+    pdf-font-path: ${REPORTS_PDF_FONT_PATH:}
+  security:
+    csrf-cookie-secure: ${SESSION_COOKIE_SECURE:false}
+    otp-max-sends-per-ip-per-hour: ${OTP_MAX_SENDS_PER_IP_PER_HOUR:20}
+  mail:
+    from: ${MAIL_FROM:no-reply@example.invalid}
+  storage:
+    private-directory: ${ALUMNI_PRIVATE_STORAGE:./var/private-files}
+  bootstrap-admin:
+    enabled: ${BOOTSTRAP_ADMIN_ENABLED:false}
+    email: ${BOOTSTRAP_ADMIN_EMAIL:}
+    password: ${BOOTSTRAP_ADMIN_PASSWORD:}
+  demo-accounts:
+    enabled: ${DEMO_ACCOUNTS_ENABLED:false}
+    password: ${DEMO_ACCOUNTS_PASSWORD:AlumniDemo2026!}
+
+logging:
+  level:
+    root: INFO
