@@ -1,0 +1,25 @@
+.profile-grid{display:grid;grid-template-columns:minmax(260px,.8fr) minmax(0,1.4fr);gap:16px;align-items:start}
+.profile-grid>.surface{padding:22px}
+.profile-summary{text-align:center}
+.profile-avatar-wrap{width:96px;height:96px;margin:0 auto 14px;border-radius:50%;overflow:hidden;background:#eef1ff;display:grid;place-items:center;border:4px solid #fff;box-shadow:0 4px 18px #1b2b5218}
+.profile-avatar-image{width:100%;height:100%;object-fit:cover}
+.profile-avatar-fallback{font-size:36px;font-weight:800;color:#3658c7}
+.profile-summary h2{margin:0;color:#26324e;font:700 17px Manrope,sans-serif}
+.profile-summary>p{margin:5px 0 14px;color:#8790a3;font-size:11px}
+.profile-facts{display:grid;gap:7px;padding:13px 0;border-top:1px solid #edf0f5;border-bottom:1px solid #edf0f5;color:#68738a;font-size:10px}
+.avatar-form{margin-top:16px;text-align:left}
+.avatar-form .button{justify-self:start}
+.profile-grid>.surface:not(.profile-summary){grid-column:2}
+.profile-grid>.profile-summary{grid-row:1 / span 3}
+.profile-grid .surface-head{margin-bottom:17px}
+.profile-grid .field-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.profile-grid .field-wide{grid-column:1/-1}
+.profile-grid .form-actions{margin-top:15px}
+.change-request-history{margin-top:20px;padding-top:16px;border-top:1px solid #edf0f5}
+.change-request-history h3{margin:0 0 11px;color:#34405c;font-size:12px}
+.change-request-item{padding:11px 0;border-bottom:1px solid #f0f2f6;display:grid;gap:5px}
+.change-request-item>div{display:flex;justify-content:space-between;gap:8px;color:#4d5870;font-size:10px}
+.change-request-item>div span{color:#79839a}
+.change-request-item small,.change-request-item p{margin:0;color:#929bad;font-size:9px}
+@media(max-width:900px){.profile-grid{grid-template-columns:1fr}.profile-grid>.surface:not(.profile-summary){grid-column:1}.profile-grid>.profile-summary{grid-row:auto}}
+@media(max-width:480px){.profile-grid>.surface{padding:17px 14px}.profile-grid .field-grid{grid-template-columns:1fr}.profile-grid .field-wide{grid-column:auto}}

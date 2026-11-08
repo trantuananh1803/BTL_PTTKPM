@@ -1,0 +1,28 @@
+# Build output and local dependencies
+backend/target/
+frontend/node_modules/
+frontend/dist/
+
+# Runtime data, logs, and local credentials
+var/private-files/
+**/private-files/
+*.log
+mysql-credential.xml
+
+# Environment and machine-specific configuration
+.env
+.env.*
+!.env.example
+application-local.yml
+application-*.local.yml
+
+# IDE and operating-system files
+.idea/
+.vscode/
+*.iml
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Report may contain real student names or identifiers; keep it local until redacted
+/docs/BaoCao_PTTKPM_Nhom04.docx

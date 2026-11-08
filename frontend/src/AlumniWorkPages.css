@@ -1,0 +1,43 @@
+.work-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(250px,.8fr);gap:16px;align-items:start}
+.work-card,.work-aside{padding:22px 23px}
+.work-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 13px;margin-top:19px}
+.work-form .field{font-size:11px}
+.work-form .field input,.work-form .field select{min-height:40px;font-size:12px}
+.work-actions{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-top:2px}
+.work-actions .button{min-height:38px}
+.work-aside h2{margin:10px 0 8px;color:#293755;font:700 18px Manrope,sans-serif;letter-spacing:-.025em}
+.work-aside p{color:#7f899e;font-size:11px;line-height:1.7}
+.work-aside-rule{height:1px;background:#edf0f5;margin:18px 0 14px}
+.work-updated{display:block;color:#959daf;font-size:10px;margin-bottom:5px}
+.work-aside>strong{font-size:11px;color:#4b5872}
+.work-preview-note{margin:0 0 16px;padding:12px 15px;border:1px solid #f0dfb7;border-radius:10px;background:#fffaf0;color:#80652a;font-size:11px}
+.work-muted,.work-empty{padding:24px 8px;color:#969eae;text-align:center;font-size:11px}
+.inline-success.work-notice,.inline-error.work-notice{margin:0 0 14px;padding:11px 13px;border-radius:8px}
+.alumni-management-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.5fr);gap:16px;align-items:start}
+.alumni-filter-card .work-form{grid-template-columns:repeat(2,minmax(0,1fr))}
+.alumni-field-wide{grid-column:1/-1}
+.work-check{grid-column:1/-1;display:flex;align-items:center;gap:8px;color:#65718a;font-size:10px}
+.work-check input{accent-color:#3458cf}
+.alumni-editor-card .surface-head{gap:12px;align-items:center}
+.alumni-editor-card .surface-head .button{white-space:nowrap}
+.alumni-profile-state{grid-column:1/-1;display:flex;justify-content:space-between;gap:10px;padding:10px 12px;border-radius:8px;background:#f7f8fc;color:#707b91;font-size:10px}
+.alumni-results-card{margin-top:16px}
+.alumni-results-card .surface-head{margin-bottom:16px}
+.work-table-wrap{max-width:100%;overflow:auto;border:1px solid #edf0f5;border-radius:9px}
+.alumni-table{width:100%;min-width:950px;border-collapse:collapse;font-size:10px}
+.alumni-table th,.alumni-table td{padding:11px 10px;border-bottom:1px solid #edf0f5;text-align:left;color:#59657d;white-space:nowrap}
+.alumni-table th{background:#f8f9fc;color:#6c7890;font-size:9px;font-weight:700}
+.alumni-table tbody tr:last-child td{border-bottom:0}
+.alumni-table .is-archived td{color:#9aa1b0;background:#fbfbfd}
+.alumni-status{display:inline-block;padding:4px 7px;border-radius:99px;background:#edf1ff;color:#5369bc;font-size:9px}
+.alumni-status.status-verified{background:#e8f6ef;color:#338063}
+.alumni-status.status-needs_correction{background:#fff2e8;color:#a96a36}
+.archived-label{color:#a58367;font-size:9px}
+.alumni-row-actions{display:flex;gap:7px}
+.alumni-row-actions button{border:0;background:transparent;color:#3d5bc2;font-size:9px;font-weight:700;padding:3px}
+.alumni-row-actions button:disabled{opacity:.55}
+.work-pagination{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px;color:#8590a4;font-size:10px}
+.work-pagination>div{display:flex;gap:7px}
+.work-pagination .button{min-height:32px;padding:6px 10px;font-size:10px}
+@media(max-width:1000px){.alumni-management-grid{grid-template-columns:1fr}.work-layout{grid-template-columns:1fr}}
+@media(max-width:620px){.work-card,.work-aside{padding:17px 14px}.work-form,.alumni-filter-card .work-form{grid-template-columns:1fr}.work-form .alumni-field-wide,.work-check,.alumni-profile-state,.work-actions{grid-column:1}.alumni-profile-state{flex-direction:column}.alumni-editor-card .surface-head{align-items:flex-start;flex-direction:column}.work-pagination{align-items:flex-start;flex-direction:column}}
